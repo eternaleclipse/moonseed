@@ -1,0 +1,47 @@
+[
+    {
+        "forwardPE": -187.23787,
+        "pegRatio": 4145.47,
+        "priceToBook": 10.165927,
+        "priceToSalesTrailing12Months": null,
+        "recommendations": "                                  Firm        To Grade    From Grade Action\nDate                                                                       \n2018-09-13 11:19:15          Bernstein    Underperform                 init\n2019-03-06 12:37:56    Bank of America    Underperform       Neutral   down\n2019-04-04 11:23:47          Citigroup             Buy       Neutral     up\n2019-04-04 12:54:56    Bank of America         Neutral  Underperform     up\n2019-05-08 13:01:32                UBS         Neutral                 main\n2019-05-29 10:45:21    Bank of America    Underperform       Neutral   down\n2019-09-26 10:41:36     Morgan Stanley    Equal-Weight    Overweight   down\n2019-09-26 13:10:54     Wolfe Research    Peer Perform    Outperform   down\n2019-09-26 13:16:52  China Renaissance            Hold                 init\n2019-10-04 13:22:04      Goldman Sachs         Neutral           Buy   down\n2019-12-03 11:36:14      Piper Jaffray         Neutral                 init\n2020-02-25 12:00:27          Bernstein  Market Perform  Underperform     up\n2020-05-27 10:51:33          JP Morgan         Neutral   Underweight     up\n2020-06-03 15:24:34      Goldman Sachs             Buy       Neutral     up\n2020-06-24 11:13:10      Goldman Sachs         Neutral           Buy   down\n2020-07-21 10:15:46               CICC      Outperform       Neutral     up\n2020-08-12 14:33:00      Piper Sandler         Neutral                 main\n2020-08-25 11:39:09                UBS         Neutral          Sell     up\n2020-08-26 09:22:26     Morgan Stanley      Overweight  Equal-Weight     up\n2020-09-08 15:32:53      Deutsche Bank             Buy                 init\n2020-10-14 10:14:28          JP Morgan      Overweight       Neutral     up\n2020-11-18 15:11:26  B of A Securities             Buy                 main\n2020-11-19 11:59:17      Deutsche Bank             Buy                 main\n2020-12-01 12:18:36      Goldman Sachs         Neutral          Sell     up\n2021-01-11 14:18:05          JP Morgan      Overweight                 main\n2021-01-12 11:48:53          Citigroup         Neutral           Buy   down\n2021-01-19 12:22:34          Jefferies            Hold                 init\n2021-01-22 12:19:56    Nomura Instinet             Buy                 init",
+        "regularMarketPrice": 58.95,
+        "symbol": "NIO"
+    },
+    {
+        "forwardPE": 205.27383,
+        "pegRatio": 0.86,
+        "priceToBook": 49.649323,
+        "priceToSalesTrailing12Months": 28.244936,
+        "recommendations": "                              Firm     To Grade From Grade Action\nDate                                                             \n2012-02-16 07:42:00      JP Morgan   Overweight              main\n2012-02-16 13:53:00     Wunderlich         Hold              down\n2012-02-17 06:17:00     Oxen Group          Buy              init\n2012-03-26 07:31:00     Wunderlich          Buy                up\n2012-05-22 05:57:00    Maxim Group          Buy              init\n...                            ...          ...        ...    ...\n2021-01-11 13:00:29  Credit Suisse      Neutral              main\n2021-01-13 12:49:21   Edward Jones         Hold              init\n2021-01-15 10:34:45        Wedbush      Neutral              main\n2021-01-20 12:14:59    Oppenheimer   Outperform              main\n2021-01-22 16:32:34      JP Morgan  Underweight              main\n\n[369 rows x 4 columns]",
+        "regularMarketPrice": 834.31,
+        "symbol": "TSLA"
+    },
+    {
+        "forwardPE": 31.01609,
+        "pegRatio": 2.17,
+        "priceToBook": 6.0745015,
+        "priceToSalesTrailing12Months": 7.5037394,
+        "recommendations": "                                         Firm    To Grade From Grade Action\nDate                                                                       \n2012-03-14 15:28:00                Oxen Group        Hold              init\n2012-03-28 06:29:00                 Citigroup         Buy              main\n2012-04-03 08:45:00  Global Equities Research  Overweight              main\n2012-04-05 06:34:00             Deutsche Bank         Buy              main\n2012-04-09 06:03:00          Pivotal Research         Buy              main\n...                                       ...         ...        ...    ...\n2020-08-25 17:05:53                       UBS         Buy              main\n2020-10-30 11:38:47             Raymond James  Outperform              main\n2020-10-30 12:38:37             Credit Suisse  Outperform              main\n2020-10-30 17:00:50                    Mizuho         Buy              main\n2021-01-22 13:30:13             Credit Suisse  Outperform              main\n\n[228 rows x 4 columns]",
+        "regularMarketPrice": 1895.68,
+        "symbol": "GOOG"
+    },
+    {
+        "forwardPE": 30.406418,
+        "pegRatio": 2.28,
+        "priceToBook": 13.942255,
+        "priceToSalesTrailing12Months": 11.688623,
+        "recommendations": "                               Firm       To Grade From Grade Action\nDate                                                                \n2012-03-16 08:19:00  Argus Research            Buy                up\n2012-03-19 14:00:00  Hilliard Lyons  Long-Term Buy              main\n2012-03-22 07:03:00  Morgan Stanley     Overweight              main\n2012-04-03 11:53:00             UBS            Buy              main\n2012-04-20 06:18:00   Deutsche Bank            Buy              main\n...                             ...            ...        ...    ...\n2020-10-29 16:00:20   Deutsche Bank            Buy              main\n2020-11-05 10:48:37     Oppenheimer     Outperform    Perform     up\n2020-11-24 11:17:51         KeyBanc     Overweight              init\n2020-12-21 12:04:59       Citigroup            Buy    Neutral     up\n2021-01-22 11:25:04   Goldman Sachs            Buy              init\n\n[299 rows x 4 columns]",
+        "regularMarketPrice": 227.08,
+        "symbol": "MSFT"
+    },
+    {
+        "forwardPE": 31.835402,
+        "pegRatio": 2.54,
+        "priceToBook": 36.144634,
+        "priceToSalesTrailing12Months": 8.525834,
+        "recommendations": "                                  Firm      To Grade From Grade Action\nDate                                                                  \n2012-02-09 08:17:00  Canaccord Genuity           Buy              main\n2012-03-08 07:33:00     FBN Securities    Outperform              main\n2012-03-13 06:08:00          Jefferies           Buy              main\n2012-03-14 06:13:00     Morgan Stanley    Overweight              main\n2012-03-14 08:21:00  Canaccord Genuity           Buy              main\n...                                ...           ...        ...    ...\n2021-01-05 13:06:48      Credit Suisse       Neutral              main\n2021-01-05 15:31:40  Canaccord Genuity           Buy              main\n2021-01-14 17:55:58           Barclays  Equal-Weight              main\n2021-01-21 13:18:45     Morgan Stanley    Overweight              main\n2021-01-22 16:23:53        Cowen & Co.    Outperform              main\n\n[760 rows x 4 columns]",
+        "regularMarketPrice": 136.28,
+        "symbol": "AAPL"
+    }
+]

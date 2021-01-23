@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="dist/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="dist/js/tabulator.min.js"></script>
+</head>
+
+<body>
+  <h1>Sup bro / sis 😎</h1>
+  <p>Moon.</p>
+  <div id="example-table" />
+
+  <script>
+    var table = new Tabulator("#example-table", {
+      height: "800px",
+      columns: [
+        { title: "Symbol", field: "symbol" },
+        { title: "Name", field: "name" },
+        { title: "Price", field: "price" },
+        { title: "Market Cap.", field: "marketCap" },
+        { title: "Price to Book", field: "priceToBook" },
+        { title: "Trailing PE", field: "trailingPE" },
+        { title: "Forward PE", field: "forwardPE" },
+        { title: "PEG Ratio", field: "pegRatio" },
+        { title: "Earnings+%", field: "earningsGrowth" },
+      ],
+    })
+
+    tickers = [
+      'AAPL',
+      'AAL',
+      'UAL',
+      'FB',
+      'GOOG',
+      'AMZN',
+      'NIO',
+      'PLTR',
+      'SNE',
+      'IBM',
+      'HPQ',
+      'SNOW',
+      'CRM',
+      'DCOM',
+      'TSLA',
+      'M',
+      'AMC',
+      'SPOT',
+      'GM',
+      'PLTK',
+      'GME',
+      'SNDL',
+      'AMD',
+      'NVDA',
+      'CCL',
+      'ATVI',
+      'IAC',
+      'MTCH',
+      'SHOP',
+      'ADBE',
+      'MSFT',
+      'GE',
+      'NET',
+      'PANW',
+      'CBAY',
+      'U',
+      'FROG',
+      'WIX',
+      'CODX',
+      'ARCT',
+      'JD',
+      'NFLX',
+      'XPEV',
+      'YNDX',
+      'MELI',
+      'SNAP',
+      'PINS',
+      'EBAY',
+      'CHGG',
+      'ZG',
+      'ZM',
+      'JMIA',
+      'TEAM',
+      'BABA',
+      'ETSY',
+      'PYPL',
+      'DELL',
+    ]
+
+    setTimeout(() =>
+      tickers.map((ticker) => {
+        fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${ticker}`)
+          .then(response => response.json())
+          .then(data => {
+            data = data.chart.result[0]
+            data = {
+              id: data.meta.symbol,
+              symbol: data.meta.symbol,
+              price: data.meta.regularMarketPrice
+            }
+            return data
+          })
+          .then(tickerData => {
+            fetch(`https://finance.yahoo.com/quote/${ticker}`)
+              .then(response => response.text())
+              .then(statsHTML => {
+                // Parse HTML
+                if (!(statsHTML.indexOf('QuoteSummaryStore') > 0)) {
+                  console.log('Invalid statsHTML')
+                  return False
+                }
+
+                console.log('statsHTML OK')
+                statsJSON = statsHTML.split('root.App.main = ')[1].split('(this)')[0].split(';\n}')[0]
+                statsRawData = JSON.parse(statsJSON)['context']['dispatcher']['stores']['QuoteSummaryStore']
+
+                pegRatio = statsRawData.defaultKeyStatistics.pegRatio.raw
+                if (pegRatio < 0) {
+                  pegRatio += '🔻'
+                } else if (pegRatio < 1) {
+                  pegRatio += '🔥'
+                } else if (pegRatio > 100) {
+                  pegRatio += '❗'
+                }
+
+                priceToBook = statsRawData.defaultKeyStatistics.priceToBook.raw
+                if (priceToBook > 0 && priceToBook < 1) {
+                  priceToBook += '🔥'
+                } else if (priceToBook > 100) {
+                  priceToBook += '❗'
+                }
+
+                if ('trailingPE' in statsRawData.summaryDetail) {
+                  trailingPE = statsRawData.summaryDetail.trailingPE.raw
+                  if (trailingPE > 0 && trailingPE < 1) {
+                    trailingPE += '🔥'
+                  } else if (trailingPE > 100) {
+                    trailingPE += '❗'
+                  }
+                } else {
+                  trailingPE = '-'
+                }
+
+                statsData = {
+                  'name': statsRawData.price.shortName,
+                  'priceToBook': priceToBook,
+                  'marketCap': statsRawData.summaryDetail.marketCap.raw,
+                  'pegRatio': pegRatio,
+                  'forwardPE': statsRawData.summaryDetail.forwardPE.raw,
+                  'trailingPE': trailingPE,
+                  'earningsGrowth': statsRawData.financialData.earningsGrowth.fmt,
+                }
+
+                // Merge
+                row = [Object.assign({}, tickerData, statsData)]
+                table.updateOrAddData(row)
+              })
+          })
+      }), 1)
+
+  </script>
+</body>
+
+</html>
